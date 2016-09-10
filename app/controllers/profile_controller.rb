@@ -14,7 +14,7 @@ class ProfileController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@profile = @user.profile
-		profile_path(current_user) 
+		user_profile_path(current_user.id,current_user.profile.id)
 	end
 
 	def create

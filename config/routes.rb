@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
-  resources :users
-  resources :profile # there was a spelling error with your resources here, u named it resource, instead of resources, that's the course of the error
- 
- 
+  resources :users do 
+    resources :profile 
+  end 
+  
 
   root 'pages#index'
 
