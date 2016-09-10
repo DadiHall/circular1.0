@@ -1,0 +1,53 @@
+<%= form_for @profile, url: user_profile_path, :html => { :multipart => true } do |f| %> 
+					
+					<div class="form-group">
+						 <%= f.label :Nafn_fyrirtækis_stofnunar %>
+       					 <%= f.text_field :company_name, autofocus: true, class: 'form-control' %>
+					</div>
+
+					<div class="form-group">
+						<%#= f.label :Fjöldi_Stöðugilda %>
+						<%#= f.number_field :staff, class: 'form-control' %>
+					</div>
+					<div class="form-group">
+						<%#= f.label :Fermetrafjöldi_bygginga %>
+						<%#= f.number_field :building_size, class: 'form-control' %>
+					</div>
+					<div class="form-group">
+						<%= f.label :Heimilisfang %>
+						<%= f.text_field :address, class: 'form-control' %>
+					</div>
+					<div class="form-group">
+						<%= f.label :Póstnúmer %>
+						<%= f.number_field :postalcode, class: 'form-control' %>
+					</div>
+					<div class="form-group">
+						<%= f.label :Bæjarfélag%>
+						<%= f.text_field :city, class: 'form-control' %>
+					</div>
+					<div class="form-group">
+						<%= f.label :Tengiliður %>
+						<%= f.text_field :contact_person, class: 'form-control' %>
+					</div>
+					<div class="form-group">
+						<%= f.label :Tölvupóstur_tengiliðs %>
+						<%= f.email_field :contact_email, class: 'form-control' %>
+					</div>
+					<div class="form-group">
+						<%= f.label :Símanúmer %>
+						<%= f.text_field :phone_number, class: 'form-control' %>
+					</div>
+					<div class="form-group">
+						<%= f.label :Starfsemi %>
+					
+						 <%= f.select(:buisness_type, options_for_select(Profile::BUISNESS_TYPES),{ :class => 'form-control' })%>
+					</div>
+					<div class="form-group">
+						<%= f.label :Lýsing_á_starfsemi %>
+						<%= f.text_area :description, class: 'form-control' %>
+					</div>
+					<div class="form-group">
+						<%= f.submit "Uppfæra skráningu", class: 'btn btn-primary' %>
+					</div>
+
+				<% end %>

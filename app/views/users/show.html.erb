@@ -1,0 +1,16 @@
+<h1> Show Users</h1>
+
+
+<div class="container">
+<div class="col-md-12 col-md-offset-1">
+        <div class="col-md-3 user-box-top">
+        <p><small>Síðast Innskráð: <%=current_user.last_sign_in_at %></small></p>
+        <% if current_user.profile %>
+          <p>Fyrirtæki: <%=current_user.profile.company_name%></p>
+          <p>Fjöldi stöðugilda: <%#=current_user.profile.staff %></p>
+          <%= link_to "Uppfæra skráningu", edit_user_profile_path(current_user) %>
+             <%= link_to "Skoða skráningu", users_path(current_user)%>
+        <% end %>          
+    
+       </div>  
+</div>

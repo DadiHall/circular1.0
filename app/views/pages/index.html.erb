@@ -1,0 +1,24 @@
+<div class="container">
+	
+	<div class="row">
+		<div class="col-md-6">
+			<div class="well">
+ 				 <div><h3>Skilaskyld fyrirtæki</h3></div>
+  				 <div >Skilaskyld fyrirtæki færa grænt bókhald og skýrslur um grænt bókhald fyrir starfsleyfisskylda starfsemi samkv. reglugerð nr.851-2002.
+  				 
+  				 <%= render 'pages/panels' %>
+  				 </div>
+  				 <%= link_to 'Skrá Grænt Bókhald', new_user_registration_path, class: 'btn btn-primary' %>
+
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="panel panel-default">
+ 				 <div class="panel-heading"><h3>Fyrirtæki án skilaskyldu</h3></div>
+  				 <div class="panel-body">Fyrirtæki sem færa ekki grænt bókhald samkv. reglugerð nr.851-2002.</div>
+  				 <%= link_to 'Skrá Grænt Bókhald', root_path, class: 'btn btn-primary' %>
+			</div>
+		</div>
+	</div>
+</div>

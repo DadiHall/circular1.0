@@ -1,0 +1,19 @@
+<div class="row">
+<h3> Profile show page </h3>
+
+<div class="col-md-2 well  profile-description">
+			<%#= image_tag @user.profile.avatar.url %>
+			<p><span class="webpage-title-icon"><%= webpage_title_helper%></span><%#= @user.profile.website %></p></br>
+
+			<h4><%= @user.profile.name %></h4></br>
+			<p>Heimilisfang: <%= @user.profile.address %></p></br>
+			<p>Póstnúmer: <%= @user.profile.postalcode %></p></br>
+			<p>Tengiliður: <%= @user.profile.contact_person %></p></br>
+			<p>Tengiliða póstur: <%= @user.profile.contact_email %></p></br>
+			<p>Símanúmer: <%= @user.profile.phone_number %></p></br>
+			<p>Tegund starfsemi: <%= @user.profile.buisness_type %></p></br>
+			<h3>Lýsing:</h3>
+			<p><%= @user.profile.description %></br> </p>
+			<p>Fjöldi starfsmanna:<%= @user.profile.staff %> </p>
+		</div>
+</div>		
