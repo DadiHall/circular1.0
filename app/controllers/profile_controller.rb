@@ -1,4 +1,4 @@
-class ProfilesController < ApplicationController
+class ProfileController < ApplicationController
 	before_action :authenticate_user!
 
 	#before_action :only_current_user

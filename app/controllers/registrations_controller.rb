@@ -11,7 +11,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def show
-
+    
   end
 
    protected
