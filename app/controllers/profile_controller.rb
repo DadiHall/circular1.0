@@ -1,4 +1,4 @@
-class ProfilesController < ApplicationController
+class ProfileController < ApplicationController
 	before_action :authenticate_user!
 
 	#before_action :only_current_user
@@ -12,9 +12,9 @@ class ProfilesController < ApplicationController
 	end
 
 	def show
-		@user = User.find(params[:user_id])
+		@user = User.find(params[:id])
 		@profile = @user.profile
-
+		profile_path(current_user) 
 	end
 
 	def create
